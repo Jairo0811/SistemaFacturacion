@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Proyecto Final Programacion 3</title>
+    <link asp-href-include="vendor/css/sb-admin.css" rel="stylesheet">
+    <link asp-href-include="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link asp-href-include="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link asp-href-include="~/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet" />
+</head>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Sidebar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+
+        <!-- Page Name And Logo -->
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Dashboard">Proyecto Final Programacion 3</a>
+
+        <!-- Sidebar Collapse Button-->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+                <!-- Dashboard -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a asp-action="Dashboard" class="nav-link">
+                        <i class="fa fa-tachometer" aria-hidden="true"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- Clientes -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#ClientesCollapse" data-parent="#exampleAccordion">
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        <span class="nav-link-text">Clientes</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="ClientesCollapse">
+                        <li>
+                            <a asp-action="Clientes">Ver Clientes</a>
+                        </li>
+                        <li>
+                            <a asp-action="CrearCliente">Crear Cliente</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Productos -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#ProductosCollapse" data-parent="#exampleAccordion">
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        <span class="nav-link-text">Productos</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="ProductosCollapse">
+                        <li>
+                            <a asp-action="Productos">Ver Productos</a>
+                        </li>
+                        <li>
+                            <a asp-action="CrearProducto">Crear Producto</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Facturas -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#FacturasCollapse" data-parent="#exampleAccordion">
+                        <i class="fa fa-table" aria-hidden="true"></i>
+                        <span class="nav-link-text">Facturas</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="FacturasCollapse">
+                        <li>
+                            <a asp-action="Facturas">Ver Facturas</a>
+                        </li>
+                        <li>
+                            <a asp-action="CrearFactura">Crear Factura</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Usuarios -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a asp-action="Usuarios" class="nav-link">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        <span class="nav-link-text">Usuarios</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Menu Collapse Button -->
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Navigation Menu -->
+            <ul class="navbar-nav ml-auto"></ul>
+            @await Html.PartialAsync("_LoginPartial")
+        </div>
+    </nav>
+    <div class="content-wrapper CreateTfont">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+
+        <!-- Page Footer -->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright  © 2018 <strong> Francis Jairo Matías Rosario 2015-2984 / Diana Caroline Mejía Encarnación 2016-3796 </strong> </small>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <script asp-src-include="vendor/jquery/jquery.min.js"></script>
+    <script asp-src-include="vendor/popper/popper.min.js"></script>
+    <script asp-src-include="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script asp-src-include="~/vendor/js/bootbox.min.js"></script>
+    <script asp-src-include="vendor/js/sb-admin.min.js"></script>
+    <script asp-src-include="~/vendor/datatables/jquery.dataTables.js"></script>
+    <script asp-src-include="~/vendor/datatables/dataTables.bootstrap4.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>aspnet-Sistema.Facturacion-D1DE0CBD-0FB2-4F4F-8AFC-9C5A96E2601D</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20180811063147_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811063147_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811063254_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811063254_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811064044_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811064044_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811064258_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811064258_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811065052_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811065052_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811084409_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811084409_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811095933_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811095933_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811100241_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811100241_DBMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180811102001_DBMigration.cs" />
+    <Compile Remove="Data\Migrations\20180811102001_DBMigration.Designer.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.2" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+</Project>

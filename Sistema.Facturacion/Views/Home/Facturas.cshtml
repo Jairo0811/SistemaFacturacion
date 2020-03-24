@@ -1,0 +1,39 @@
+﻿@model List<Factura>
+
+@{
+    ViewData["Title"] = "Facturas";
+}
+
+<div class="page-header text-center" style="color:white; background-color:darkslategrey; padding:40px">
+    <h1>Facturas</h1>
+</div>
+<br />
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Cliente</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Total</th>
+                <th>Creado Por</th>
+                <th>Fecha de creacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Cliente.Nombre @item.Cliente.Apellido</td>
+                    <td>@item.Producto.Nombre $@item.Producto.Precio</td>
+                    <td>@item.Cantidad</td>
+                    <td>$@(item.Cantidad * item.Producto.Precio)</td>
+                    <td>@item.Usuario.UserName</td>
+                    <td>@item.Fecha.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,29 @@
+﻿@model Cliente
+
+@{
+    ViewData["Title"] = "Crear Cliente";
+}
+
+<div class="page-header text-center" style="color:white; background-color:darkslategrey; padding:40px">
+    <h1>Crear Cliente</h1>
+</div>
+<br />
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <!-- Nombre -->
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+    <!-- Apellido -->
+    <div class="form-group">
+        <label asp-for="Apellido"></label>
+        <input asp-for="Apellido" class="form-control" />
+        <span asp-validation-for="Apellido" class="text-danger"></span>
+    </div>
+    <!-- Submit -->
+    <div class="form-group ">
+        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Create</button>
+    </div>
+</form>

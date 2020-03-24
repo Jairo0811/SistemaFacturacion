@@ -1,0 +1,30 @@
+﻿@model List<ApplicationUser>
+
+@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<div class="page-header text-center" style="color:white; background-color:darkslategrey; padding:40px">
+    <h1>Usuarios</h1>
+</div>
+<br />
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.UserName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

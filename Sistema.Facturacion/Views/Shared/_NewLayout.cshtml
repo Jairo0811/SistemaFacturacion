@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Proyecto Final Programacion 3</title>
+    <link asp-href-include="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link asp-href-include="~/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    @RenderBody()
+    <script asp-src-include="~/vendor/jquery/jquery.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

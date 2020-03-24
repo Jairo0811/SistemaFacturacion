@@ -1,0 +1,45 @@
+﻿@model CrearFacturaViewModel
+
+@{
+    ViewData["Title"] = "Crear Factura";
+}
+
+<div class="page-header text-center" style="color:white; background-color:darkslategrey; padding:40px">
+    <h1>Crear Factura</h1>
+</div>
+<br />
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <!-- Clientes -->
+    <div class="form-group">
+        <label asp-for="Factura.ClienteId">Cliente</label>
+        <select asp-for="Factura.ClienteId" class="form-control" data-toggle="dropdown">
+            @foreach (var item in Model.Clientes)
+            {
+                <option value="@item.Id">@item.Nombre @item.Apellido</option>
+            }
+        </select>
+        <span asp-validation-for="Factura.ClienteId" class="text-danger"></span>
+    </div>
+    <!-- Productos -->
+    <div class="form-group">
+        <label asp-for="Factura.ProductoId">Producto</label>
+        <select asp-for="Factura.ProductoId" class="form-control" data-toggle="dropdown">
+            @foreach (var item in Model.Productos)
+            {
+                <option value="@item.Id">@item.Nombre $@item.Precio</option>
+            }
+        </select>
+        <span asp-validation-for="Factura.ProductoId" class="text-danger"></span>
+    </div>
+    <!-- Cantidad -->
+    <div class="form-group">
+        <label asp-for="Factura.Cantidad"></label>
+        <input type="number" asp-for="Factura.Cantidad" class="form-control" />
+        <span asp-validation-for="Factura.Cantidad" class="text-danger"></span>
+    </div>
+    <!-- Submit -->
+    <div class="form-group ">
+        <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Crear Factura</button>
+    </div>
+</form>
